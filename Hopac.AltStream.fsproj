@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Hopac.AltStream</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Ayrat Hudaygulov</Authors>
+    <Title>Hopac.AltStream</Title>
+    <Description>Better streams for Hopac library</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Szer/Hopac.AltStream</PackageProjectUrl>
+    <PackageTags>fsharp;hopac;stream</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/Szer/Hopac.AltStream</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="alt-stream.fs" />
+    <None Include="README.md" />
+    <None Include="RELEASE_NOTES.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hopac" Version="0.4.1" />
+  </ItemGroup>
+
+</Project>
