@@ -1,0 +1,12 @@
+parameters:
+  name: 'Windows'
+  vm: 'vs2017-win2016'
+
+jobs:
+- job: ${{ parameters.name }}
+  pool:
+    vmImage: ${{ parameters.vm }}
+
+  steps:
+  - script: dotnet build --configuration Release
+    displayName: '${{ parameters.name }} build release'

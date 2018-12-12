@@ -1,12 +1,17 @@
 # Hopac.AltStream
 
 Contains just one module with **better** streams for Hopac library.
-They are not persistent by default, takes constant heap memory (and generates less memory traffic overall) and slightly faster.
+They are not persistent by default, takes constant heap memory (also generates less memory traffic overall) and slightly faster.
 
 ## Installation
 
-`dotnet add package Hopac.AltStream`
-`Install-Package Hopac.AltStream`
+* `paket add Hopac.AltStream`
+* `dotnet add package Hopac.AltStream`
+* `Install-Package Hopac.AltStream`
+
+Or simply add `alt-stream.fs` directly via `paket.dependencies`
+
+* `github Szer/Hopac.AltStream alt-stream.fs`
 
 ## Requirements
 
@@ -15,6 +20,6 @@ They are not persistent by default, takes constant heap memory (and generates le
 
 ## Maintainer(s)
 
-- [Ayrat Hudaygulov][ayratMail]
+* [Ayrat Hudaygulov][ayratMail]
 
 [ayratMail]: mailto:ayrat@hudaygulov.ru "Ayrat Hudaygulov email"
