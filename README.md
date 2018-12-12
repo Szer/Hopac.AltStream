@@ -1,5 +1,7 @@
 # Hopac.AltStream
 
+[![Build Status](https://szer.visualstudio.com/Hopac.AltStream/_apis/build/status/Szer.Hopac.AltStream)](https://szer.visualstudio.com/Hopac.AltStream/_build/latest?definitionId=9)
+
 Contains just one module with **better** streams for Hopac library.
 They are not persistent by default, takes constant heap memory (also generates less memory traffic overall) and slightly faster.
 
