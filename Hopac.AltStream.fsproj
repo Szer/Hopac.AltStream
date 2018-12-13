@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Hopac.AltStream</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Ayrat Hudaygulov</Authors>
     <Title>Hopac.AltStream</Title>
     <Description>Better streams for Hopac library</Description>

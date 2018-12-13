@@ -53,7 +53,7 @@ module AltStream =
 
     /// creating infinite stream with same value `x`
     let rec indefinitely (x: 'x) : AltStream<'x> =
-        cons (x, indefinitely x)
+        delayFun (fun _ -> cons (x, indefinitely x))
 
     /// Returns a stream that produces results whenever the given stream produces
     /// an element and the given job returns `Some` result from that element
@@ -163,13 +163,14 @@ module AltStream =
     /// 
     /// Output stream will end when both source stream will end
     let rec merge (ls: AltStream<'x>) (rs: AltStream<'x>) : AltStream<'x> =
-        ls ^=> function
-        | AltCons (l, ls) -> cons (l, merge rs ls)
-        | _ -> rs
-        <|>
-        rs ^=> function
-        | AltCons (r, rs) -> cons (r, merge ls rs)
-        | _ -> ls
+        delayFun (fun _ ->
+            ls ^=> function
+            | AltCons (l, ls) -> cons (l, merge rs ls)
+            | _ -> rs
+            <|>
+            rs ^=> function
+            | AltCons (r, rs) -> cons (r, merge ls rs)
+            | _ -> ls)
 
     /// Returns stream which contains all `ls` values and after  all `rs` values
     /// 
